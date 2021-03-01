@@ -26,3 +26,22 @@ class Block {
     return hash.digest('hex');
   }
 }
+
+class Chain {
+  public static instance = new Chain();
+
+  chain: Block[];
+
+  constructor() {
+    this.chain = [new Block("", new Transaction(100,'genesis', 'AbhinavR'))];
+  }
+
+  get lastBlock() {
+    return this.chain[this.chain.length - 1];
+  }
+
+  addBlock(transaction: Transaction, senderPublicKey: string, signature: Buffer) {
+    const newBlock = new Block(this.lastBlock.hash, transaction);
+    this.chain.push(newBlock);
+  }
+}

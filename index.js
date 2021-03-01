@@ -44,3 +44,16 @@ class Block {
         return hash.digest('hex');
     }
 }
+class Chain {
+    constructor() {
+        this.chain = [new Block("", new Transaction(100, 'genesis', 'AbhinavR'))];
+    }
+    get lastBlock() {
+        return this.chain[this.chain.length - 1];
+    }
+    addBlock(transaction, senderPublicKey, signature) {
+        const newBlock = new Block(this.lastBlock.hash, transaction);
+        this.chain.push(newBlock);
+    }
+}
+Chain.instance = new Chain();
