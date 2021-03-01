@@ -1,0 +1,24 @@
+{
+  "name": "blockchain-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhinavRobinson/blockchain-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhinavRobinson/blockchain-js/issues"
+  },
+  "homepage": "https://github.com/AbhinavRobinson/blockchain-js#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "typescript": "^4.2.2"
+  }
+}
